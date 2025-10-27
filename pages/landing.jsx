@@ -17,9 +17,7 @@ export default function Landing() {
   return (
     <div
       className="flex h-screen w-screen
-    text-black dark:text-white
-    bg-gradient-to-b from-amber-50 via-amber-100 to-amber-200
-    dark:from-[#1a1a1a] dark:via-[#0d0d0d] dark:to-black"
+    text-[#ffffff] dark:text-[#fff9cb] bg-[linear-gradient(to_bottom_left,#237287,#28375c)] dark:bg-[linear-gradient(to_bottom_left,#0a2228,#0c101b)]"
     >
       <aside
         className={`relative transition-all duration-6npm run dev00 ease-in-out truncate ${
@@ -83,9 +81,7 @@ export default function Landing() {
 
       <main
         className=" flex-1 p-6 w-full rounded-s-4xl overflow-y-auto shadow-xl
-    text-black dark:text-white
-    bg-linear-to-br from-amber-50 via-amber-100 to-amber-200
-    dark:from-neutral-900 dark:via-neutral-950 dark:to-black"
+   text-[#121212] dark:text-[#fff9cb] bg-[#ffffff] dark:bg-[linear-gradient(to_bottom_left,#0a2228,#0c101b)]"
       >
         <Outlet />
       </main>
