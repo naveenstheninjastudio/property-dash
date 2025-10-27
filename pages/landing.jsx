@@ -10,16 +10,21 @@ import {
 import { useState } from "react";
 
 export default function Landing() {
-  const [SidebarOpen, SetSidebarOpen] = useState(true);
+  const [SidebarOpen, SetSidebarOpen] = useState(false);
 
   const toggleSidebar = () => SetSidebarOpen(!SidebarOpen);
 
   return (
-    <div className="flex h-screen w-screen bg-linear-to-b from-[#1a1a1a] via-[#0d0d0d] to-black shadow-xl text-white">
+    <div
+      className="flex h-screen w-screen
+    text-black dark:text-white
+    bg-gradient-to-b from-amber-50 via-amber-100 to-amber-200
+    dark:from-[#1a1a1a] dark:via-[#0d0d0d] dark:to-black"
+    >
       <aside
-        className={`relative transition-all duration-500 ease-in-out ${
+        className={`relative transition-all duration-6npm run dev00 ease-in-out truncate ${
           SidebarOpen ? "w-20" : "w-60"
-        } p-5 shadow-xl`}
+        } p-5 `}
       >
         <div className="absolute inset-0 bg-linear-to-trpointer-events-none" />
         <div className="relative z-10">
@@ -28,7 +33,7 @@ export default function Landing() {
           </div>
           <button
             onClick={toggleSidebar}
-            className="flex items-center gap-3 p-2 rounded-lg hover:bg-neutral-800/40 transition"
+            className="flex items-center gap-3 p-2 mb-1.5 rounded-lg hover:bg-neutral-800/40 transition"
           >
             <Menu className="w-5 h-5" />
           </button>
@@ -76,8 +81,12 @@ export default function Landing() {
         </div>
       </aside>
 
-      {/* Main Content */}
-      <main className="flex-1 p-6 w-full rounded-s-4xl text-white bg-linear-to-br from-neutral-900 via-neutral-950 to-black overflow-y-auto">
+      <main
+        className=" flex-1 p-6 w-full rounded-s-4xl overflow-y-auto shadow-xl
+    text-black dark:text-white
+    bg-linear-to-br from-amber-50 via-amber-100 to-amber-200
+    dark:from-neutral-900 dark:via-neutral-950 dark:to-black"
+      >
         <Outlet />
       </main>
     </div>
